@@ -1,11 +1,3 @@
----
-title: "CausalCoxMGM"
-author: "Tyler C. Lovelace"
-output:
-  github_document:
-    keep_md: TRUE
----
-
 # CausalCoxMGM
 Implementation of CausalCoxMGM algorithm and scripts for analysis of simulated and real-world biomedical datasets.
 
