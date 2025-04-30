@@ -1,0 +1,297 @@
+* installing *source* package ‘rCausalMGM’ ...
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0’
+using C++14
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c Bootstrap.cpp -o Bootstrap.o
+In file included from inc/MGM.hpp:4,
+                 from inc/Bootstrap.hpp:4,
+                 from Bootstrap.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c ChoiceGenerator.cpp -o ChoiceGenerator.o
+In file included from inc/ChoiceGenerator.hpp:4,
+                 from ChoiceGenerator.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c ContinuousVariable.cpp -o ContinuousVariable.o
+In file included from inc/Variable.hpp:17,
+                 from inc/ContinuousVariable.hpp:13,
+                 from ContinuousVariable.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c DataSet.cpp -o DataSet.o
+In file included from inc/DataSet.hpp:15,
+                 from DataSet.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c DegenerateGaussianScore.cpp -o DegenerateGaussianScore.o
+In file included from inc/DegenerateGaussianScore.hpp:4,
+                 from DegenerateGaussianScore.cpp:3:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c DepthChoiceGenerator.cpp -o DepthChoiceGenerator.o
+In file included from inc/DepthChoiceGenerator.hpp:4,
+                 from DepthChoiceGenerator.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c DiscreteVariable.cpp -o DiscreteVariable.o
+In file included from inc/Variable.hpp:17,
+                 from inc/DiscreteVariable.hpp:13,
+                 from DiscreteVariable.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c Edge.cpp -o Edge.o
+In file included from inc/Node.hpp:17,
+                 from inc/Edge.hpp:4,
+                 from Edge.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c EdgeListGraph.cpp -o EdgeListGraph.o
+In file included from inc/EdgeListGraph.hpp:4,
+                 from EdgeListGraph.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c FasStableProducerConsumer.cpp -o FasStableProducerConsumer.o
+In file included from inc/EdgeListGraph.hpp:4,
+                 from inc/FasStableProducerConsumer.hpp:6,
+                 from FasStableProducerConsumer.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c Fci.cpp -o Fci.o
+In file included from inc/EdgeListGraph.hpp:4,
+                 from inc/Fci.hpp:20,
+                 from Fci.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c FciOrient.cpp -o FciOrient.o
+In file included from inc/EdgeListGraph.hpp:4,
+                 from inc/FciOrient.hpp:23,
+                 from FciOrient.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c GraphUtils.cpp -o GraphUtils.o
+In file included from inc/EdgeListGraph.hpp:4,
+                 from inc/GraphUtils.hpp:10,
+                 from GraphUtils.cpp:2:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c GrowShrink.cpp -o GrowShrink.o
+In file included from inc/DataSet.hpp:15,
+                 from inc/Score.hpp:4,
+                 from inc/GrowShrink.hpp:4,
+                 from GrowShrink.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c IndTestMulti.cpp -o IndTestMulti.o
+In file included from inc/IndTestMulti.hpp:4,
+                 from IndTestMulti.cpp:3:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c Knowledge.cpp -o Knowledge.o
+In file included from inc/Knowledge.hpp:4,
+                 from Knowledge.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c LinearRegression.cpp -o LinearRegression.o
+In file included from inc/LinearRegression.hpp:4,
+                 from LinearRegression.cpp:3:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c LogisticRegression.cpp -o LogisticRegression.o
+In file included from inc/LogisticRegression.hpp:4,
+                 from LogisticRegression.cpp:3:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c LogisticRegressionResult.cpp -o LogisticRegressionResult.o
+In file included from inc/LogisticRegressionResult.hpp:4,
+                 from LogisticRegressionResult.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c MGM.cpp -o MGM.o
+In file included from inc/MGM.hpp:4,
+                 from MGM.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c MGMParams.cpp -o MGMParams.o
+In file included from inc/MGMParams.hpp:4,
+                 from MGMParams.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c MeekRules.cpp -o MeekRules.o
+In file included from inc/EdgeListGraph.hpp:4,
+                 from inc/MeekRules.hpp:4,
+                 from MeekRules.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c Node.cpp -o Node.o
+In file included from inc/Node.hpp:17,
+                 from Node.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c PcStable.cpp -o PcStable.o
+In file included from inc/DataSet.hpp:15,
+                 from inc/IndependenceTest.hpp:4,
+                 from inc/PcStable.hpp:4,
+                 from PcStable.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c PossibleDsepFciConsumerProducer.cpp -o PossibleDsepFciConsumerProducer.o
+In file included from inc/EdgeListGraph.hpp:4,
+                 from inc/PossibleDsepFciConsumerProducer.hpp:18,
+                 from PossibleDsepFciConsumerProducer.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c ProximalGradient.cpp -o ProximalGradient.o
+In file included from inc/ProximalGradient.hpp:6,
+                 from ProximalGradient.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c RegressionBicScore.cpp -o RegressionBicScore.o
+In file included from inc/RegressionBicScore.hpp:4,
+                 from RegressionBicScore.cpp:3:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c RegressionResult.cpp -o RegressionResult.o
+In file included from inc/RegressionResult.hpp:4,
+                 from RegressionResult.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c STARS.cpp -o STARS.o
+In file included from inc/STARS.hpp:4,
+                 from STARS.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c STEPS.cpp -o STEPS.o
+In file included from inc/STEPS.hpp:4,
+                 from STEPS.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c SearchCV.cpp -o SearchCV.o
+In file included from inc/SearchCV.hpp:4,
+                 from SearchCV.cpp:3:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c SearchGraphUtils.cpp -o SearchGraphUtils.o
+In file included from inc/EdgeListGraph.hpp:4,
+                 from inc/SearchGraphUtils.hpp:4,
+                 from SearchGraphUtils.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c SearchWrappers.cpp -o SearchWrappers.o
+In file included from inc/MGM.hpp:4,
+                 from SearchWrappers.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c SepsetMap.cpp -o SepsetMap.o
+In file included from inc/Node.hpp:17,
+                 from inc/SepsetMap.hpp:8,
+                 from SepsetMap.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c SepsetProducer.cpp -o SepsetProducer.o
+In file included from inc/Node.hpp:17,
+                 from inc/Triple.hpp:4,
+                 from inc/SepsetProducer.hpp:6,
+                 from SepsetProducer.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c StabilityUtils.cpp -o StabilityUtils.o
+In file included from inc/MGM.hpp:4,
+                 from inc/StabilityUtils.hpp:6,
+                 from StabilityUtils.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/share/R/include" -DNDEBUG  -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/BH/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/Rcpp/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppArmadillo/include' -I'/home/tyler/R/x86_64-pc-linux-gnu-library/4.1/RcppThread/include'    -I"inc" -fopenmp -pthread -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-CIJAF4/r-base-4.3.3=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2  -c Triple.cpp -o Triple.o
+In file included from inc/Node.hpp:17,
+                 from inc/Triple.hpp:4,
+                 from Triple.cpp:1:
+inc/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o rCausalMGM.so Bootstrap.o ChoiceGenerator.o ContinuousVariable.o DataSet.o DegenerateGaussianScore.o DepthChoiceGenerator.o DiscreteVariable.o Edge.o EdgeListGraph.o FasStableProducerConsumer.o Fci.o FciOrient.o GraphUtils.o GrowShrink.o IndTestMulti.o Knowledge.o LinearRegression.o LogisticRegression.o LogisticRegressionResult.o MGM.o MGMParams.o MeekRules.o Node.o PcStable.o PossibleDsepFciConsumerProducer.o ProximalGradient.o RcppExports.o RegressionBicScore.o RegressionResult.o STARS.o STEPS.o SearchCV.o SearchGraphUtils.o SearchWrappers.o SepsetMap.o SepsetProducer.o StabilityUtils.o Triple.o -fopenmp -llapack -lblas -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+installing to /home/tyler/Documents/research/censored_variables/rCausalMGM/polished/node-update/jss-update/rCausalMGM/rCausalMGM.Rcheck/00LOCK-rCausalMGM/00new/rCausalMGM/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (rCausalMGM)

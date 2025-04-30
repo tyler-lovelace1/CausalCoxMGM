@@ -1,0 +1,763 @@
+
+R version 4.3.3 (2024-02-29) -- "Angel Food Cake"
+Copyright (C) 2024 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "rCausalMGM"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> base::assign(".ExTimings", "rCausalMGM-Ex.timings", pos = 'CheckExEnv')
+> base::cat("name\tuser\tsystem\telapsed\n", file=base::get(".ExTimings", pos = 'CheckExEnv'))
+> base::assign(".format_ptime",
++ function(x) {
++   if(!is.na(x[4L])) x[1L] <- x[1L] + x[4L]
++   if(!is.na(x[5L])) x[2L] <- x[2L] + x[5L]
++   options(OutDec = '.')
++   format(x[1L:3L], digits = 7L)
++ },
++ pos = 'CheckExEnv')
+> 
+> ### * </HEADER>
+> library('rCausalMGM')
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("SHD")
+> ### * SHD
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: SHD
+> ### Title: Structural Hamming Distance (SHD)
+> ### Aliases: SHD
+> 
+> ### ** Examples
+> 
+> sim <- simRandomDAG(200, 25)
+> g <- pcStable(sim$data)
+> SHD(g, cpdag(sim$graph))
+SHD 
+ 41 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("SHD", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("adjMat2Graph")
+> ### * adjMat2Graph
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: adjMat2Graph
+> ### Title: Convert an adjacency matrix into a graph
+> ### Aliases: adjMat2Graph
+> 
+> ### ** Examples
+> 
+> mat <- matrix(sample(c(0,1), 16, replace=TRUE), nrow=4)
+> mat <- mat + t(mat)
+> nodes <- c("X1", "X2", "X3", "X4")
+> g <- adjMat2Graph(mat, nodes)
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("adjMat2Graph", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("allMetrics")
+> ### * allMetrics
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: allMetrics
+> ### Title: Combined graph recovery metrics
+> ### Aliases: allMetrics
+> 
+> ### ** Examples
+> 
+> sim <- simRandomDAG(200, 25)
+> g <- pcStable(sim$data)
+> allMetrics(g, cpdag(sim$graph))
+            SHD    adjPrecision       adjRecall           adjF1          adjMCC 
+     41.0000000       0.8620690       0.6756757       0.7575758       0.7349299 
+orientPrecision    orientRecall        orientF1       orientMCC 
+      0.7727273       0.7727273       0.7727273       0.5941558 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("allMetrics", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("bootstrap")
+> ### * bootstrap
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: bootstrap
+> ### Title: Runs bootstrapping for a causal graph on the dataset.
+> ### Aliases: bootstrap
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D sim <- simRandomDAG(200, 25)
+> ##D g <- pcStable(sim$data)
+> ##D g.boot <- bootstrap(sim$data, g)
+> ##D print(g.boot)
+> ##D print(head(g.boot$stabilities))
+> ## End(Not run)
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("bootstrap", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("cpdag")
+> ### * cpdag
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: cpdag
+> ### Title: Calculate the CPDAG for a given DAG
+> ### Aliases: cpdag
+> 
+> ### ** Examples
+> 
+> sim <- simRandomDAG(200, 25)
+> sim$cpdag <- cpdag(sim$graph)
+> print(sim$cpdag)
+Algorithm:  Ground Truth 
+Nodes:  25 
+Edges:  37 
+  Directed:  34 
+  Undirected:  3 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("cpdag", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("fciCV")
+> ### * fciCV
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: fciCV
+> ### Title: Implements k-fold cross-validation for FCI-Stable
+> ### Aliases: fciCV
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D sim <- simRandomDAG(200, 25)
+> ##D g.cv <- fciCV(sim$data)
+> ##D print(g.cv)
+> ## End(Not run)
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("fciCV", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("fciStable")
+> ### * fciStable
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: fciStable
+> ### Title: Runs the causal discovery algorithm FCI-Stable on a dataset.
+> ### Aliases: fciStable
+> 
+> ### ** Examples
+> 
+> sim <- simRandomDAG(200, 25)
+> g <- fciStable(sim$data)
+> print(g)
+Algorithm:  MFCI-Stable 
+Nodes:  25 
+Edges:  28 
+  Unoriented:  3 
+  Partially Oriented:  16 
+  Directed:  8 
+  Bidirected:  1 
+alpha =  0.05 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("fciStable", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("fciStars")
+> ### * fciStars
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: fciStars
+> ### Title: Implements StARS for FCI-Stable
+> ### Aliases: fciStars
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D sim <- simRandomDAG(200, 25)
+> ##D g.stars <- fciStars(sim$data)
+> ##D print(g.stars)
+> ## End(Not run)
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("fciStars", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("growShrinkMB")
+> ### * growShrinkMB
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: growShrinkMB
+> ### Title: Implements Grow-Shrink algorithm for Markov blanket
+> ###   identification
+> ### Aliases: growShrinkMB
+> 
+> ### ** Examples
+> 
+> sim <- simRandomDAG(200, 25)
+> mb <- growShrinkMB(sim$data, "X1")
+> print(mb)
+[1] "X3"  "X10" "Y4"  "X2"  "Y3" 
+attr(,"Score")
+[1] -143.5252
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("growShrinkMB", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("mgm")
+> ### * mgm
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: mgm
+> ### Title: Calculate the MGM graph on a dataset
+> ### Aliases: mgm
+> 
+> ### ** Examples
+> 
+> sim <- simRandomDAG(200, 25)
+> g <- mgm(sim$data)
+> print(g)
+Algorithm:  MGM 
+Nodes:  25 
+Edges:  49 
+lambda = {0.2, 0.2, 0.2}
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("mgm", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("mgmCV")
+> ### * mgmCV
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: mgmCV
+> ### Title: Implements k-fold cross-validation for MGM
+> ### Aliases: mgmCV
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D sim <- simRandomDAG(200, 25)
+> ##D ig.cv <- mgmCV(sim$data)
+> ##D print(ig.cv)
+> ## End(Not run)
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("mgmCV", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("mgmPath")
+> ### * mgmPath
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: mgmPath
+> ### Title: Estimates a solution path for MGM
+> ### Aliases: mgmPath
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D sim <- simRandomDAG(200, 25)
+> ##D ig.path <- mgmPath(sim$data)
+> ##D print(ig.path)
+> ## End(Not run)
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("mgmPath", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("mgmfciCV")
+> ### * mgmfciCV
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: mgmfciCV
+> ### Title: Implements k-fold cross-validation for MGM-FCI-Stable
+> ### Aliases: mgmfciCV
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D sim <- simRandomDAG(200, 25)
+> ##D g.cv <- mgmfciCV(sim$data)
+> ##D print(g.cv)
+> ## End(Not run)
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("mgmfciCV", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("mgmpcCV")
+> ### * mgmpcCV
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: mgmpcCV
+> ### Title: Implements k-fold cross-validation for MGM-PC-Stable
+> ### Aliases: mgmpcCV
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D sim <- simRandomDAG(200, 25)
+> ##D g.cv <- mgmpcCV(sim$data)
+> ##D print(g.cv)
+> ## End(Not run)
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("mgmpcCV", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("moral")
+> ### * moral
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: moral
+> ### Title: Calculate the moral graph for a given DAG
+> ### Aliases: moral
+> 
+> ### ** Examples
+> 
+> sim <- simRandomDAG(200, 25)
+> sim$moral <- moral(sim$graph)
+> print(sim$moral)
+Algorithm:  Ground Truth 
+Nodes:  25 
+Edges:  66 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("moral", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("pag")
+> ### * pag
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: pag
+> ### Title: Calculate the PAG for a given DAG and set of latent variables
+> ### Aliases: pag
+> 
+> ### ** Examples
+> 
+> sim <- simRandomDAG(200, 25)
+> sim$pag <- pag(sim$graph)
+> print(sim$pag)
+Algorithm:   
+Nodes:  25 
+Edges:  37 
+  Unoriented:  3 
+  Partially Oriented:  28 
+  Directed:  6 
+  Bidirected:  0 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("pag", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("pcCV")
+> ### * pcCV
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: pcCV
+> ### Title: Implements k-fold cross-validation for PC-Stable
+> ### Aliases: pcCV
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D sim <- simRandomDAG(200, 25)
+> ##D g.cv <- pcCV(sim$data)
+> ##D print(g.cv)
+> ## End(Not run)
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("pcCV", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("pcStable")
+> ### * pcStable
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: pcStable
+> ### Title: Runs the causal discovery algorithm PC-Stable on a dataset.
+> ### Aliases: pcStable
+> 
+> ### ** Examples
+> 
+> sim <- simRandomDAG(200, 25)
+> g <- pcStable(sim$data)
+> print(g)
+Algorithm:  MPC-Stable 
+Nodes:  25 
+Edges:  29 
+  Directed:  25 
+  Undirected:  4 
+alpha =  0.05 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("pcStable", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("pcStars")
+> ### * pcStars
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: pcStars
+> ### Title: Implements StARS for PC-Stable
+> ### Aliases: pcStars
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D sim <- simRandomDAG(200, 25)
+> ##D g.stars <- pcStars(sim$data)
+> ##D print(g.stars)
+> ## End(Not run)
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("pcStars", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("prMetrics")
+> ### * prMetrics
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: prMetrics
+> ### Title: Combined adjaceny and orientation precision-recall metrics
+> ### Aliases: prMetrics
+> 
+> ### ** Examples
+> 
+> sim <- simRandomDAG(200, 25)
+> g <- pcStable(sim$data)
+> prMetrics(g, cpdag(sim$graph))
+   adjPrecision       adjRecall           adjF1          adjMCC orientPrecision 
+      0.8620690       0.6756757       0.7575758       0.7349299       0.7727273 
+   orientRecall        orientF1       orientMCC 
+      0.7727273       0.7727273       0.5941558 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("prMetrics", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("prMetricsAdjacency")
+> ### * prMetricsAdjacency
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: prMetricsAdjacency
+> ### Title: Adjacency Precision-Recall Metrics
+> ### Aliases: prMetricsAdjacency
+> 
+> ### ** Examples
+> 
+> sim <- simRandomDAG(200, 25)
+> g <- pcStable(sim$data)
+> prMetricsAdjacency(g, cpdag(sim$graph))
+adjPrecision    adjRecall        adjF1       adjMCC 
+   0.8620690    0.6756757    0.7575758    0.7349299 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("prMetricsAdjacency", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("prMetricsCausal")
+> ### * prMetricsCausal
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: prMetricsCausal
+> ### Title: Causal Orientaion Precision-Recall Metrics for CPDAGs
+> ### Aliases: prMetricsCausal
+> 
+> ### ** Examples
+> 
+> sim <- simRandomDAG(200, 25)
+> g <- pcStable(sim$data)
+> prMetricsCausal(g, sim$graph)
+causalPrecision    causalRecall        causalF1 
+      0.6800000       0.4594595       0.5483871 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("prMetricsCausal", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("prMetricsOrientation")
+> ### * prMetricsOrientation
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: prMetricsOrientation
+> ### Title: Orientation Precision-Recall Metrics
+> ### Aliases: prMetricsOrientation
+> 
+> ### ** Examples
+> 
+> data("train_n10000_p10")
+Warning in data("train_n10000_p10") :
+  data set ‘train_n10000_p10’ not found
+> sim <- simRandomDAG(200, 25)
+> g <- pcStable(sim$data)
+> prMetricsOrientation(g, cpdag(sim$graph))
+orientPrecision    orientRecall        orientF1       orientMCC 
+      0.7727273       0.7727273       0.7727273       0.5941558 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("prMetricsOrientation", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("printGraph")
+> ### * printGraph
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: printGraph
+> ### Title: Display a graph object as text.
+> ### Aliases: printGraph
+> 
+> ### ** Examples
+> 
+> sim <- simRandomDAG(200, 25)
+> g <- mgm(sim$data)
+> printGraph(g)
+Graph Nodes:
+X1,X2,X3,X4,X5,X6,X7,X8,X9,X10,X11,X12,X13,Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9,Y10,Y11,Y12
+
+Graph Edges:
+1. X1 --- X10
+2. X1 --- X2
+3. X1 --- X3
+4. X1 --- X6
+5. X1 --- Y3
+6. X1 --- Y4
+7. X10 --- X13
+8. X10 --- X3
+9. X10 --- Y7
+10. X11 --- X4
+11. X11 --- X7
+12. X11 --- Y1
+13. X11 --- Y2
+14. X12 --- X2
+15. X12 --- X4
+16. X12 --- Y10
+17. X12 --- Y7
+18. X12 --- Y8
+19. X13 --- X4
+20. X13 --- Y4
+21. X2 --- Y11
+22. X2 --- Y4
+23. X2 --- Y8
+24. X3 --- Y7
+25. X4 --- X7
+26. X4 --- Y1
+27. X4 --- Y2
+28. X4 --- Y7
+29. X4 --- Y8
+30. X5 --- X7
+31. X5 --- Y8
+32. X6 --- X8
+33. X6 --- X9
+34. X6 --- Y9
+35. X8 --- Y12
+36. X8 --- Y5
+37. X8 --- Y8
+38. X8 --- Y9
+39. X9 --- Y6
+40. Y1 --- Y12
+41. Y1 --- Y5
+42. Y1 --- Y6
+43. Y10 --- Y12
+44. Y10 --- Y3
+45. Y10 --- Y8
+46. Y11 --- Y4
+47. Y3 --- Y6
+48. Y4 --- Y7
+49. Y6 --- Y9
+
+Algorithm: MGM
+Lambda: 0.2 0.2 0.2
+Type: undirected
+
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("printGraph", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("simRandomDAG")
+> ### * simRandomDAG
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: simRandomDAG
+> ### Title: A function to simulate a random forward DAG from a SEM model.
+> ### Aliases: simRandomDAG
+> 
+> ### ** Examples
+> 
+> sim <- simRandomDAG(200, 25)
+> print(sim$graph)
+Algorithm:  Ground Truth 
+Nodes:  25 
+Edges:  37 
+  Directed:  37 
+  Undirected:  0 
+> print(sim$data[1:6,])
+          X1         X2         X3          X4          X5         X6
+1  0.3587742 -1.0342905 -0.8552490 -0.01855983  1.50760424 -0.2793260
+2 -0.1948464 -1.9807302 -0.3622180 -0.31806837  1.21901593  0.2120864
+3 -0.2952820  1.6883551 -1.6093171 -0.92936215  0.11699741  0.1821841
+4  0.4966404  1.1362010 -0.4166997 -1.48746031  0.09300394 -1.2074401
+5  0.4849128  0.9575451 -1.4390751 -1.07519230  0.85322925  1.5545471
+6  0.0187845 -0.6223436  0.2158123  1.00002880 -0.25167313 -1.7377733
+           X7         X8           X9        X10        X11        X12
+1 -1.05912281 -0.5645968  2.285432828  0.7776928 -0.1344495 -0.3647015
+2 -0.11903722  1.4977763  0.367243353 -0.2855385  0.1685091 -1.5977768
+3 -0.10563221  0.9592969 -0.005865957  2.5210794  0.9647328  1.6322672
+4 -0.86984697 -2.4814919  0.512077211  0.6033298  0.4087789  1.8204692
+5 -0.02468472  0.5184935 -0.447384225  1.7338354 -0.4664382  1.3426206
+6  0.42280152 -2.1175548 -1.211032442  0.5384070 -2.2397830 -0.4980822
+         X13 Y1 Y2 Y3 Y4 Y5 Y6 Y7 Y8 Y9 Y10 Y11 Y12
+1 -0.9917951  C  C  A  C  B  B  A  B  C   A   C   B
+2 -0.4442001  A  B  B  B  B  A  C  B  B   B   A   A
+3  1.0122279  B  B  B  A  C  A  A  C  A   A   B   C
+4  0.6395226  B  C  C  B  A  A  C  A  B   A   C   B
+5 -0.1670554  A  C  B  B  A  A  A  A  A   B   A   B
+6  0.4316898  C  A  B  C  B  B  B  C  A   A   A   C
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("simRandomDAG", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("skeleton")
+> ### * skeleton
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: skeleton
+> ### Title: Calculate the undirected skeleton for a given DAG
+> ### Aliases: skeleton
+> 
+> ### ** Examples
+> 
+> sim <- simRandomDAG(200, 25)
+> sim$skeleton <- skeleton(sim$graph)
+> print(sim$skeleton)
+Algorithm:  Ground Truth 
+Nodes:  25 
+Edges:  37 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("skeleton", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> ### * <FOOTER>
+> ###
+> cleanEx()
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  7.565 14.715 3.586 0 0 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')

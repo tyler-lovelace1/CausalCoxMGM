@@ -1,0 +1,66 @@
+SHD                     Structural Hamming Distance (SHD)
+adjMat2Graph            Convert an adjacency matrix into a graph
+allMetrics              Combined graph recovery metrics
+bootstrap               Runs bootstrapping for a causal graph on the
+                        dataset.
+cpdag                   Calculate the CPDAG for a given DAG
+createKnowledge         A function to create a prior knowledge object
+                        for use with causal discovery algorithms
+fciCV                   Implements k-fold cross-validation for
+                        FCI-Stable
+fciStable               Runs the causal discovery algorithm FCI-Stable
+                        on a dataset.
+fciStars                Implements StARS for FCI-Stable
+graphTable              A function to generate a data.frame for objects
+                        from graph class. It incorporates adjacency and
+                        orientation frequency if estimates of edge
+                        stability are available.
+growShrinkMB            Implements Grow-Shrink algorithm for Markov
+                        blanket identification
+loadGraph               Load a graph from a ".txt" file
+mgm                     Calculate the MGM graph on a dataset
+mgmCV                   Implements k-fold cross-validation for MGM
+mgmPath                 Estimates a solution path for MGM
+mgmfciCV                Implements k-fold cross-validation for
+                        MGM-FCI-Stable
+mgmpcCV                 Implements k-fold cross-validation for
+                        MGM-PC-Stable
+moral                   Calculate the moral graph for a given DAG
+pag                     Calculate the PAG for a given DAG and set of
+                        latent variables
+pcCV                    Implements k-fold cross-validation for
+                        PC-Stable
+pcStable                Runs the causal discovery algorithm PC-Stable
+                        on a dataset.
+pcStars                 Implements StARS for PC-Stable
+plot.graph              A plot override function for the graph class
+plot.graphCV            A plot override function for the graphCV class
+plot.graphPath          A plot override function for the graphCV class
+plot.graphSTARS         A plot override function for the graphSTARS
+                        class
+plot.graphSTEPS         A plot override function for the graphSTEPS
+                        class
+prMetrics               Combined adjaceny and orientation
+                        precision-recall metrics
+prMetricsAdjacency      Adjacency Precision-Recall Metrics
+prMetricsCausal         Causal Orientaion Precision-Recall Metrics for
+                        CPDAGs
+prMetricsOrientation    Orientation Precision-Recall Metrics
+print.graph             A print override function for the graph class
+print.graphCV           A print override function for the graphCV class
+print.graphPath         A print override function for the graphPath
+                        class
+print.graphSTARS        A print override function for the graphSTARS
+                        class
+print.graphSTEPS        A print override function for the graphSTEPS
+                        class
+print.knowledge         A print override function for the knowledge
+                        class
+printGraph              Display a graph object as text.
+saveGraph               Save a graph to a file. Supported file types
+                        are ".txt" and ".sif".
+simRandomDAG            A function to simulate a random forward DAG
+                        from a SEM model.
+skeleton                Calculate the undirected skeleton for a given
+                        DAG
+steps                   Implements StEPS and StARS for MGM
