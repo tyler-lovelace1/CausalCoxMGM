@@ -18,7 +18,6 @@ R CMD INSTALL rCausalMGM/rCausalMGM_1.0.tar.gz
 ## Demonstration of CausalCoxMGM with the WHAS500 dataset
 
 
-
 First, we begin by loading the necessray R packages for this analysis.
 
 
@@ -215,3 +214,17 @@ plot(g, nodeAttr=list(fontsize=36))
 ```
 
 ![plot of chunk finalmodelplot](figure/finalmodelplot-1.png)
+
+## License
+
+The following data files are under the CC0 public domain:
+
+```
+whas500.csv
+metabric.rna.full.csv
+metabric.rna.erp.full.csv
+metabric.rna.ern.full.csv
+meta_cohort_common_genes.rds
+```
+
+While all other files composing CausalCoxMGM are under the GPL-3.0 license.
