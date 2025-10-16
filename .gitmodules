@@ -1,0 +1,4 @@
+[submodule "rCausalMGM"]
+	path = rCausalMGM
+	url = https://github.com/tyler-lovelace1/rCausalMGM.git
+	branch = master
